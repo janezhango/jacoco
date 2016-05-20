@@ -49,10 +49,10 @@ public class ReportGenerator {
 	 */
 	public ReportGenerator(final File projectDirectory) {
 		this.title = projectDirectory.getName();
-		this.executionDataFile = new File(projectDirectory, "jacoco.exec");
-		this.classesDirectory = new File(projectDirectory, "bin");
+		this.executionDataFile = new File(projectDirectory, "jacoco-client.exec");
+		this.classesDirectory = new File(projectDirectory, "classes");
 		this.sourceDirectory = new File(projectDirectory, "src");
-		this.reportDirectory = new File(projectDirectory, "coveragereport");
+		this.reportDirectory = new File(projectDirectory, "coverage-report");
 	}
 
 	/**
@@ -133,6 +133,14 @@ public class ReportGenerator {
 					args[i]));
 			generator.create();
 		}
+
+		final ReportGenerator generator = new ReportGenerator(new File(
+				"C:\\hpmc\\console\\hp4m-service\\target"));
+		generator.create();
+
+		final ReportGenerator generator2 = new ReportGenerator(new File(
+				"C:\\hpmc\\connector\\hp4m-connector\\target"));
+		generator2.create();
 	}
 
 }

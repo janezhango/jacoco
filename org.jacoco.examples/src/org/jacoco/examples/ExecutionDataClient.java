@@ -27,7 +27,7 @@ import org.jacoco.core.runtime.RemoteControlWriter;
  */
 public final class ExecutionDataClient {
 
-	private static final String DESTFILE = "jacoco-client.exec";
+	private static final String DESTFILE = "c:\\jacoco-client.exec";
 
 	private static final String ADDRESS = "localhost";
 

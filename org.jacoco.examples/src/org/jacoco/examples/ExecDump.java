@@ -100,6 +100,6 @@ public final class ExecDump {
 	 *             in case of errors executing the example
 	 */
 	public static void main(final String[] args) throws IOException {
-		new ExecDump(System.out).execute(args);
+		new ExecDump(System.out).execute(new String[]{"c:\\jacoco-client.exec"});
 	}
 }
